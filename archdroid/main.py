@@ -16,6 +16,15 @@ class INSTALL:
             if hasattr(self, function_name) and callable(getattr(self, function_name)):
                 getattr(self, function_name)()
 
+    def libndk():
+        print("ARM translation")
+
+    def libhoudini():
+        print("ARM translation (non AMD)")
+    
+    def widevine():
+        print("Widevine DRM for Netflix, Prime Video, etc")
+
 def run():
-    target = ["libndk", "widevine"]
+    target = ["libhoudini", "widevine"]
     obj = INSTALL()
